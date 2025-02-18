@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Frontend Mentor | NFT preview card component</title>
+	<style>
+		.attribution {
+			position: absolute;
+			bottom: 10px;
+			width: 100%;
+			font-size: 11px;
+			text-align: center;
+			color: white;
+		}
+
+		.attribution a {
+			color: white;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: hsl(217, 54%, 11%);
+		}
+
+		main {
+			display: flex;
+			flex-direction: column;
+			color: white;
+			background-color: hsl(216, 50%, 16%);
+			padding: 20px;
+			border-radius: 10px;
+			justify-content: center;
+			gap: 20px;
+			width: 300px;
+		}
+
+		img {
+			border-radius: 10px;
+			display: flex;
+			position: relative;
+			cursor: pointer;
+		}
+
+		main > div:first-of-type {
+			position: relative;
+		}
+
+		img:hover + div {
+			display: flex !important;
+		}
+
+		main > div:first-of-type div {
+			background: hsla(178, 100%, 50%, 0.5);
+			width: 100%;
+			display: none;
+			border-radius: 10px;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			height: 100%;
+		}
+
+		h1 {
+			font-size: 20px;
+			cursor: pointer;
+		}
+
+		h1:hover {
+			color: hsl(178, 100%, 50%);
+		}
+
+		p {
+			font-size: 18px;
+			color: hsl(215, 51%, 70%);
+		}
+
+		main > div {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		hr {
+			border: 1px solid hsl(215, 32%, 27%);
+		}
+
+		main > div:last-of-type > div:first-of-type {
+			display: flex;
+			color: hsl(178, 100%, 50%);
+		}
+
+		main > div:last-of-type > div:last-of-type {
+			display: flex;
+			color: hsl(215, 51%, 70%);
+		}
+
+		main > div:last-of-type > div:first-of-type::before {
+			content: "";
+			width: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: inherit;
+			margin-right: 10px;
+			font-weight: 500;
+			background: url(images/icon-ethereum.svg) center/contain no-repeat;
+		}
+
+		main > div:last-of-type > div:last-of-type::before {
+			content: "";
+			width: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: inherit;
+			margin-right: 10px;
+			font-weight: 500;
+			background: url(images/icon-clock.svg) center/contain no-repeat;
+		}
+
+		main > p:last-of-type {
+			display: flex;
+			gap: 5px;
+			align-items: center;
+			font-size: 16px;
+		}
+
+		main > p:last-of-type::before {
+			content: "";
+			width: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 30px;
+			margin-right: 10px;
+			font-weight: 500;
+			background: url(images/image-avatar.png) center/contain no-repeat;
+			border: 1px solid white;
+			border-radius: 50%;
+		}
+
+		p span {
+			color: white;
+			cursor: pointer;
+		}
+
+		p span:hover {
+			color: hsl(178, 100%, 50%);
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div>
+			<img src="images/image-equilibrium.jpg" alt="Equilibrium Image" width="260px">
+			<div>
+				<img src="images/icon-view.svg" alt="View Icon">
+			</div>
+		</div>
+
+		<h1>Equilibrium #3429</h1>
+
+		<p>Our Equilibrium collection promotes balance and calm.</p>
+
+		<div>
+			<div>0.041 ETH</div>
+			<div>3 days left</div>
+		</div>
+
+		<hr>
+
+		<p>Creation of <span>Jules Wyvern</span></p>
+	</main>
+
+	<div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by Dylan Yeo.</div>
+</body>
+</html>
